@@ -66,7 +66,7 @@ export const CardView = ({ cards }) => {
     <div className="card-view">
       {cards.map((card) => (
         <figure>
-          <figcaption>{getDisplayName(card.name)}</figcaption>
+          <figcaption className={card.color}>{getDisplayName(card.name)}</figcaption>
           <Card image={getFilename(card.name, card.card)} />
         </figure>
       ))}
