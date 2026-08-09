@@ -8,20 +8,23 @@ import { CardView } from "./CardView";
 const createDecks = (bots) => {
   let muscleCounter = 1;
   let pelotonCounter = 1;
+  let colorCounter = 1;
   const decks = bots.flatMap((bot, idx) => {
     if (bot === "peloton") {
       return [
-        { cards: shuffle([...PELOTON]), name: `peloton-${pelotonCounter++}` },
+        { cards: shuffle([...PELOTON]), name: `peloton-${pelotonCounter++}`, color: `color-${colorCounter++}` },
       ];
     } else {
       return [
         {
           cards: shuffle([...MUSCLE_SPRINTER]),
           name: `muscle-${muscleCounter}-sprinter`,
+          color: `color-${colorCounter}`,
         },
         {
           cards: shuffle([...MUSCLE_ROULER]),
           name: `muscle-${muscleCounter++}-rouler`,
+          color: `color-${colorCounter++}`,
         },
       ];
     }
@@ -38,11 +41,13 @@ export const GameRound = ({ bots }) => {
         return {
           name: deck.name,
           card: deck.cards.pop(),
+          color: deck.color,
         };
       } else {
         return {
           name: deck.name,
           card: -1,
+          color: deck.color,
         };
       }
     });
