@@ -42,3 +42,23 @@ figcaption {
   font-weight: 700;
   margin-bottom: 1em;
 }
+
+.color-1 {
+  bg-color: white;
+}
+.color-2 {
+  bg-color: black;
+  font-color: white;
+}
+.color-3 {
+  bg-color: green;
+}
+.color-4 {
+  bg-color: blue;
+}
+.color-5 {
+  bg-color: pink;
+}
+.color-6 {
+  bg-color: red;
+}
