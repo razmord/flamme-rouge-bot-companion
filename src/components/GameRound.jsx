@@ -60,7 +60,7 @@ export const GameRound = ({ bots }) => {
         {" "}
         {round === 0
           ? "Hit next round when all human players have made their decisions"
-          : "Here are bots cards!"}
+          : "Here are bots cards! It's round "+round}
       </h2>
 
       <div>
